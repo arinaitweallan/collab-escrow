@@ -1,0 +1,25 @@
+user 0x11 is eligible for airdrop from protocol Acct
+eligible for 10_000 tokens
+this token is deployed on base l2 network
+
+problem: user 0x11 does not have gas to claim
+
+helper: user 0x12 can provide gas and help user 0x11 claim the airdrop
+they agree terms to share the airdrop 10/90
+
+we need:
+escrow contract to hold the helper funds
+when user claims: they share percentages should be respected
+
+architecture
+
+--- Airdrop contract ---
+Can be a simple contract
+Can be somewhat complex, using merkle roots
+
+
+--- Collab escrow ---
+Holds the helpers' funds
+Defines agreement terms
+Helps user 0x11 claim airdrop using gas provided
+Then distribute funds according ot agreement terms
