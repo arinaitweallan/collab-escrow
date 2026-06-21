@@ -24,14 +24,6 @@ contract AirdropContract {
     mapping(address => bool) eligible;
     mapping(address => uint256) claimAmount;
 
-    // alternative accounting
-    struct User {
-        address user;
-        uint256 amount;
-    }
-
-    mapping(User => bool) private _eligible;
-
     // --- modifier
     modifier authorized() {
         if (msg.sender != owner) revert Unauthorized();
